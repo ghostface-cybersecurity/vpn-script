@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo -e "\n---\n| script for connecting to .ovpn configurations via openvpn |\n| ~ by hellcard |\n"
+echo -e "your directories in $(pwd):\n"
+ls
+echo -e "\n| user: $(whoami) |\n"
+echo -e "\n---\n"
+echo -e -n  "enter the name of the directory with VPN configurations: "
+read dir
+echo -e "\n---\n"
+
+echo "| cd into $dir ... |"
+cd $dir
+
+echo -n "do you want to view ALL available VPN configurations? (y/n): "
+read ynchoice
+
+if [ $ynchoice == "y" ]
+then
+echo -e "\n| available configurations: |"
+echo "---"
+ls
+echo -e "---\n"
+
+else
+echo "you have chosen not to view available configurations"
+fi
+
+echo -n "enter the VPN configuration: "
+read config
+
+echo "| connection... |"
+echo -e "\n!!! USERNAME AND PASSWORD FOR CONFIG !!!\n"
+echo "username: ---" # enter your username from config
+echo -e "password: ---\n" #enter your password from config
+sudo openvpn $config
+
+cd ..
+echo -e "| end |"
