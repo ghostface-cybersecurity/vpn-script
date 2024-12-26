@@ -12,5 +12,5 @@ $ chmod +x vpn-script
 <h3 align="center">After this, you can use the script by running it with the following command:</h2>
 
 ```
-./vpn-script
+$ ./vpn-script
 ```
