@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\n---\n| script for connecting to .ovpn configurations via openvpn |\n| ~ by ghostface |\n"
+echo -e "\n---\n| script for connecting to .ovpn configurations via openvpn |\n| ~ by ghostface-cybersecurity |\n"
 echo -e "your directories in $(pwd):\n"
 ls
 echo -e "\n| user: $(whoami) |\n"
